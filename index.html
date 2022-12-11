@@ -77,8 +77,6 @@
       document.getElementById("userId").append(profile.userId)
       document.getElementById("statusMessage").append(profile.statusMessage)
       document.getElementById("displayName").append(profile.displayName)
-      const userIDchar = profile.userId
-      alert("user is" + userIDchar)
     }
 
     function getEnvironment() {
@@ -99,7 +97,7 @@
     // last thing here
 
     async function main() {
-      alert("LINE Developers x Skooldio")
+      // alert("LINE Developers x Skooldio")
       await liff.init({ liffId: "1657726443-q6nyWZMQ" })
       getEnvironment()
       getUserProfile()
