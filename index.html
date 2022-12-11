@@ -16,7 +16,7 @@
   <p id="userId"><b>userId:</b> </p>
   <p id="displayName"><b>displayName:</b> </p>
   <p id="statusMessage"><b>statusMessage:</b> </p>
-  <p id="decodedIDToken"><b>email:</b> </p>
+  <!-- <p id="decodedIDToken"><b>email:</b> </p> -->
   <p id="type"><b>type:</b> </p>
   <p id="viewType"><b>viewType:</b> </p>
   <p id="utouId"><b>utouId:</b> </p>
@@ -69,6 +69,11 @@
     }
 
     function getContext() {
+      document.getElementById("type").append(liff.getcontext().type)
+      document.getElementById("viewType").append(liff.getcontext().viewType)
+      document.getElementById("utouId").append(liff.getcontext().utouId)
+      document.getElementById("roomId").append(liff.getcontext().roomId)
+      document.getElementById("groupId").append(liff.getcontext().groupId)
     }
 
     async function getUserProfile() {
@@ -101,7 +106,7 @@
       await liff.init({ liffId: "1657726443-q6nyWZMQ" })
       getEnvironment()
       getUserProfile()
-      // getContext()
+      getContext()
       // getFriendship()
       // createUniversalLink()
     }
